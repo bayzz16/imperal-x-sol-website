@@ -206,13 +206,13 @@ summary:focus-visible {
   transform: scaleX(1);
 }
 
-.discord-btn {
+.header-action {
   justify-self: end;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 0 18px;
+  justify-content: center;
   min-height: 44px;
+  padding: 0 18px;
   border: 1px solid rgba(255, 214, 122, 0.8);
   border-radius: 12px;
   background: rgba(140, 92, 255, 0.14);
@@ -602,6 +602,13 @@ summary:focus-visible {
 .rank-card.knight { color: #6ec5ff; }
 .rank-card.elite { color: #ff9af7; }
 .rank-card.champion { color: #ffcf64; }
+.rank-card.legend { color: #ffdb7a; }
+.rank-card.mythic { color: #ff8fe8; }
+.rank-card.helper { color: #7df0d5; }
+.rank-card.moderator { color: #75b5ff; }
+.rank-card.admin { color: #ff7f93; }
+.rank-card.manager { color: #eaccff; }
+.rank-card.owner { color: #ffe4a7; }
 
 .info-strip {
   width: min(100% - 32px, 1200px);
@@ -886,7 +893,7 @@ summary:focus-visible {
     padding: 0 12px;
   }
 
-  .discord-btn {
+  .header-action {
     display: none;
   }
 

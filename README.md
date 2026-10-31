@@ -29,3 +29,8 @@ The server address, official Discord invite, final rank names, benefits, and pri
 ## Local checks
 
 No build step or dependencies are required. Check the HTML, CSS, and JavaScript in a browser at desktop and mobile widths before treating the page as production-ready. The GitHub Pages deployment itself must still be confirmed in repository Settings.
+
+
+## Deployment
+
+This repository is published with the GitHub Actions workflow in `.github/workflows/pages.yml`. The workflow uploads the repository root as a static GitHub Pages artifact and deploys it after the repository owner enables GitHub Pages with the **GitHub Actions** source in Settings → Pages.

@@ -1,148 +1,206 @@
 <!doctype html>
 <html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0614">
-  <meta name="description" content="Imperial SMP × Slice of Life - website fantasy redesign.">
-  <title>Imperial SMP × Slice of Life</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css?v=20261031-fantasy-redesign">
-  <script src="./script.js?v=20261031-fantasy-redesign" defer></script>
-</head>
-<body>
-  <div class="page-shell">
-    <header class="site-header">
-      <div class="header-inner">
-        <a class="brand" href="#top" aria-label="Imperial SMP × Slice of Life home">
-          <span class="brand-logo" aria-hidden="true">IMPERAL</span>
-          <span class="brand-separator" aria-hidden="true">×</span>
-          <span class="brand-sol" aria-hidden="true">SoL</span>
-        </a>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b0616">
+    <meta
+      name="description"
+      content="Imperial SMP × Slice of Life — landing page fantasi dengan desain castle, portal, serta informasi rank."
+    >
+    <title>Imperial SMP × Slice of Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css?v=20261101-redesign-3">
+    <script src="./script.js?v=20261101-redesign-3" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header" id="top">
+        <div class="header-inner">
+          <a class="brand" href="#top" aria-label="Imperial SMP × Slice of Life, beranda">
+            <span class="brand-mark" aria-hidden="true">
+              <span class="brand-mark-inner"></span>
+            </span>
+            <span class="brand-copy" aria-hidden="true">
+              <span class="brand-line brand-top">IMPERAL</span>
+              <span class="brand-line brand-bottom">SMP × SoL</span>
+            </span>
+          </a>
 
-        <nav class="main-nav" aria-label="Navigasi utama">
-          <a href="#top" class="is-active"><span>🏠</span>Home</a>
-          <a href="#rank"><span>🏆</span>Rank</a>
-          <a href="#skill"><span>⚔️</span>Rass &amp; Skill</a>
-          <a href="#info"><span>ℹ️</span>Info</a>
-          <a href="#faq"><span>❓</span>FAQ</a>
-        </nav>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+            aria-label="Buka menu navigasi"
+          >
+            <span class="menu-label">Menu</span>
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+          </button>
 
-        <a class="discord-btn" href="#discord" aria-label="Login to Discord">
-          <span aria-hidden="true">🎮</span>
-          Login Discord
-          <span aria-hidden="true">→</span>
-        </a>
-      </div>
-    </header>
+          <nav class="main-nav" id="primary-navigation" aria-label="Navigasi utama">
+            <a href="#top" class="is-active"><span aria-hidden="true">🏠</span> Home</a>
+            <a href="#rank"><span aria-hidden="true">🏆</span> Rank</a>
+            <a href="#skill"><span aria-hidden="true">⚔️</span> Rass &amp; Skill</a>
+            <a href="#info"><span aria-hidden="true">ℹ️</span> Info</a>
+            <a href="#faq"><span aria-hidden="true">❓</span> FAQ</a>
+          </nav>
 
-    <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-sky-glow" aria-hidden="true"></div>
-        <div class="hero-background" aria-hidden="true">
-          <div class="floating-island left"></div>
-          <div class="floating-island right"></div>
-          <div class="castle silhouette"></div>
-          <div class="portal portal-left"></div>
-          <div class="portal portal-right"></div>
-          <div class="sparkles" aria-hidden="true"></div>
+          <a class="discord-btn" href="#info" aria-label="Login Discord">
+            <span aria-hidden="true">🎮</span>
+            Login Discord
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
+      </header>
 
-        <div class="hero-content">
-          <div class="hero-wordmark" aria-label="Imperial SMP x Slice of Life">
-            <span class="wordmark-imperial">IMPERAL</span>
-            <span class="wordmark-separator">×</span>
-            <span class="wordmark-sol">Slice of Life</span>
+      <main>
+        <section class="hero" aria-labelledby="hero-title">
+          <div class="hero-scene" aria-hidden="true">
+            <div class="scene-glow"></div>
+            <div class="floating-island island-left"></div>
+            <div class="floating-island island-right"></div>
+            <div class="castle-backing"></div>
+            <div class="portal portal-left"></div>
+            <div class="portal portal-right"></div>
+            <div class="purple-particles"></div>
           </div>
 
-          <h1 id="hero-title">Dua Dunia, Satu Petualangan!</h1>
+          <div class="hero-content">
+            <div class="hero-title-wrap" aria-label="Imperial SMP × Slice of Life logo">
+              <span class="title-imperial">IMPERAL</span>
+              <span class="title-divider">×</span>
+              <span class="title-sol">Slice of Life</span>
+            </div>
 
-          <p class="hero-subtitle">
-            Masuki dunia fantasi yang penuh dengan petualangan, lalu nikmati kehidupan santai di Slice of Life.
-          </p>
+            <h1 id="hero-title">Dua Dunia, Satu Petualangan!</h1>
 
-          <div class="hero-actions">
-            <a href="#join" class="primary-btn">▶ Join Sekarang</a>
-            <a href="#rank" class="secondary-btn">🛒 Beli Rank</a>
-          </div>
-        </div>
-      </section>
+            <p class="hero-subtitle">
+              Masuki dunia fantasi penuh petualangan, lalu nikmati kehidupan santai dan
+              membangun cerita bersama di Slice of Life.
+            </p>
 
-      <section class="rank-section" id="rank" aria-labelledby="rank-title">
-        <div class="section-title-wrap">
-          <h2 id="rank-title">Rank List</h2>
-        </div>
-
-        <p class="section-subtitle">Tingkatkan pengalamanmu dengan rank eksklusif!</p>
-
-        <div class="rank-grid" aria-label="Daftar rank">
-          <article class="rank-card member">
-            <div class="rank-badge" aria-hidden="true">✦</div>
-            <h3>Member</h3>
-            <p>Rank dasar untuk semua pemain.</p>
-            <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="rank-card adventurer">
-            <div class="rank-badge" aria-hidden="true">✦</div>
-            <h3>Adventurer</h3>
-            <p>Nikmati lebih banyak fitur menarik.</p>
-            <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="rank-card knight">
-            <div class="rank-badge" aria-hidden="true">✦</div>
-            <h3>Knight</h3>
-            <p>Tunjukkan keberanianmu di server.</p>
-            <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="rank-card elite">
-            <div class="rank-badge" aria-hidden="true">✦</div>
-            <h3>Elite</h3>
-            <p>Jadilah yang terbaik di antara yang lain.</p>
-            <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
-          </article>
-
-          <article class="rank-card champion">
-            <div class="rank-badge" aria-hidden="true">✦</div>
-            <h3>Champion</h3>
-            <p>Raih kehormatan tertinggi di Imperial.</p>
-            <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
-          </article>
-        </div>
-      </section>
-
-      <footer class="site-footer" id="info">
-        <div class="info-row">
-          <div class="info-block">
-            <div class="mini-icon" aria-hidden="true">🏰</div>
-            <div>
-              <span class="label">Server Status</span>
-              <strong>Online <span class="live-dot"></span> +1.2K Pemain</strong>
+            <div class="hero-actions">
+              <a href="#join" class="primary-btn">▶ Join Sekarang</a>
+              <a href="#rank" class="secondary-btn">🛒 Beli Rank</a>
             </div>
           </div>
+        </section>
 
-          <div class="info-block center">
-            <div class="mini-icon" aria-hidden="true">⚔️</div>
-            <div>
-              <span class="label">Imperial Network × Slice of Life</span>
-              <strong>Build • Survival • Live Together</strong>
-            </div>
+        <div class="section-divider" aria-hidden="true"></div>
+
+        <section class="rank-section" id="rank" aria-labelledby="rank-title">
+          <div class="section-heading">
+            <h2 id="rank-title">Rank List</h2>
           </div>
 
-          <div class="info-block right">
-            <div class="mini-icon" aria-hidden="true">📅</div>
-            <div>
-              <span class="label">Project Start</span>
-              <strong>14 Agustus 2025</strong>
+          <p class="section-subtitle">Tingkatkan pengalamanmu dengan rank eksklusif!</p>
+
+          <div class="rank-grid" aria-label="Daftar rank yang tersedia">
+            <article class="rank-card member">
+              <div class="rank-badge" aria-hidden="true">✦</div>
+              <h3>Member</h3>
+              <p>Rank dasar untuk semua pemain.</p>
+              <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="rank-card adventurer">
+              <div class="rank-badge" aria-hidden="true">✦</div>
+              <h3>Adventurer</h3>
+              <p>Nikmati lebih banyak fitur menarik.</p>
+              <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="rank-card knight">
+              <div class="rank-badge" aria-hidden="true">✦</div>
+              <h3>Knight</h3>
+              <p>Tunjukkan keberanianmu di server.</p>
+              <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="rank-card elite">
+              <div class="rank-badge" aria-hidden="true">✦</div>
+              <h3>Elite</h3>
+              <p>Jadilah yang terbaik di antara yang lain.</p>
+              <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
+            </article>
+
+            <article class="rank-card champion">
+              <div class="rank-badge" aria-hidden="true">✦</div>
+              <h3>Champion</h3>
+              <p>Raih kehormatan tertinggi di Imperial.</p>
+              <a href="#info">Lihat Detail <span aria-hidden="true">→</span></a>
+            </article>
+          </div>
+        </section>
+
+        <section class="info-strip" id="info" aria-label="Informasi server">
+          <div class="info-row">
+            <div class="info-block">
+              <span class="mini-icon" aria-hidden="true">🏰</span>
+              <div>
+                <span class="info-label">Server Status</span>
+                <strong>Online <span class="live-dot"></span> +1.2K Pemain</strong>
+              </div>
+            </div>
+
+            <div class="info-block center-block">
+              <span class="mini-icon" aria-hidden="true">⚔️</span>
+              <div>
+                <span class="info-label">Imperial Network × Slice of Life</span>
+                <strong>Build • Survival • Live Together</strong>
+              </div>
+            </div>
+
+            <div class="info-block">
+              <span class="mini-icon" aria-hidden="true">📅</span>
+              <div>
+                <span class="info-label">Project Start</span>
+                <strong>14 Agustus 2025</strong>
+              </div>
             </div>
           </div>
-        </div>
-      </footer>
-    </main>
-  </div>
-</body>
+        </section>
+
+        <section class="faq-section" id="faq" aria-labelledby="faq-title">
+          <div class="faq-intro">
+            <p class="eyebrow">FAQ</p>
+            <h2 id="faq-title">Sebelum masuk.</h2>
+          </div>
+
+          <div class="faq-list">
+            <details open>
+              <summary>Kapan server bisa dimasuki?</summary>
+              <p>Alamat dan jadwal server akan diumumkan saat proyek siap di-launch secara resmi.</p>
+            </details>
+            <details>
+              <summary>Apakah Java dan Bedrock didukung?</summary>
+              <p>Target dukungan Java dan Bedrock tetap dibahas sesuai kebutuhan komunitas server.</p>
+            </details>
+            <details>
+              <summary>Apakah toko rank sudah bisa digunakan?</summary>
+              <p>Belum. Website ini hanya menampilkan informasi dan visual, bukan proses pembayaran atau login.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="skill-section" id="skill" aria-labelledby="skill-title">
+          <div class="skill-copy">
+            <p class="eyebrow">Rass &amp; Skill</p>
+            <h2 id="skill-title">Sistem fantasi siap dibangun.</h2>
+            <p>
+              Setiap ras dan kemampuan direncanakan agar terasa unik, seimbang, dan mudah dimainkan.
+            </p>
+          </div>
+          <div class="skill-list" aria-label="Daftar prioritas sistem">
+            <div><span>01</span><strong>Identitas</strong><small>Setiap ras punya ciri khas yang mudah dikenali.</small></div>
+            <div><span>02</span><strong>Kemampuan</strong><small>Kekuatan harus terasa unik tetapi tetap adil di gameplay.</small></div>
+            <div><span>03</span><strong>Balancing</strong><small>Detail final akan ditentukan setelah pengujian komunitas.</small></div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

@@ -201,3 +201,22 @@ h2 { margin-bottom: 1.1rem; font-size: clamp(2.7rem, 5.4vw, 4.7rem); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
+
+/* Responsive rank collection: wide desktop, laptop, tablet and mobile. */
+.rank-section { padding-block: clamp(3.5rem, 7vw, 7rem); border-block: 1px solid rgba(198,182,243,.2); background: radial-gradient(ellipse at 50% 0%, #21143a 0%, #100d1a 46%, #0b100e 100%); }
+.rank-heading { max-width: 48rem; }
+.rank-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(.65rem, 1.4vw, 1.1rem); }
+.rank-card { --rank: #dce3ed; position: relative; min-width: 0; padding: clamp(.85rem, 1.6vw, 1.35rem) .75rem 1rem; overflow: hidden; text-align: center; border: 1px solid color-mix(in srgb, var(--rank) 72%, transparent); background: linear-gradient(145deg, color-mix(in srgb, var(--rank) 15%, #101018), #0c0d13 72%); box-shadow: inset 0 0 0 3px rgba(255,255,255,.025), 0 8px 24px rgba(0,0,0,.2); }
+.rank-card::before, .rank-card::after { content: ""; position: absolute; top: .55rem; width: .42rem; height: .42rem; background: var(--rank); box-shadow: 0 0 12px color-mix(in srgb, var(--rank) 70%, transparent); }
+.rank-card::before { left: .55rem; } .rank-card::after { right: .55rem; }
+.rank-emblem { display: grid; place-items: center; width: 2rem; height: 2rem; margin: 0 auto .65rem; color: var(--rank); border: 1px solid var(--rank); transform: rotate(45deg); font-size: .85rem; }
+.rank-card h3 { margin: .25rem 0; color: var(--rank); font-size: clamp(.85rem, 1.2vw, 1.1rem); letter-spacing: .045em; text-transform: uppercase; overflow-wrap: anywhere; }
+.rank-card p { margin: 0; color: var(--muted); font-size: .78rem; }
+.rank-member { --rank:#e2e5ec; } .rank-adventurer { --rank:#79ff43; } .rank-knight { --rank:#39aaff; } .rank-elite { --rank:#ee5cff; }
+.rank-champion, .rank-legend { --rank:#ffc22e; } .rank-hero, .rank-admin { --rank:#ff425f; } .rank-mythic, .rank-manager { --rank:#e65cff; }
+.rank-helper { --rank:#29e5e0; } .rank-moderator { --rank:#4bbcff; } .rank-owner { --rank:#ffe9a0; }
+.rank-footnote { margin: 1.25rem 0 0; color: var(--dim); font-size: .8rem; }
+@media (min-width: 1440px) { .rank-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1.25rem; } }
+@media (max-width: 1024px) { .rank-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 600px) { .rank-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; } .rank-card { padding: 1rem .5rem .85rem; } }
+@media (max-width: 340px) { .rank-grid { grid-template-columns: 1fr; } }

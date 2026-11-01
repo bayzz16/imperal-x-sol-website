@@ -48,6 +48,8 @@ jobs:
               raise SystemExit(f"Expected exactly one .menu-toggle button, found {len(toggles)}")
           if toggles[0].get("aria-controls") != "primary-navigation":
               raise SystemExit("Mobile navigation toggle must control #primary-navigation")
+          if "primary-navigation" not in parser.ids:
+              raise SystemExit("The mobile navigation target #primary-navigation does not exist")
           if toggles[0].get("aria-expanded") != "false":
               raise SystemExit("Mobile navigation must start collapsed")
           if not Path("script.js").exists() or "menu-toggle" not in Path("script.js").read_text(encoding="utf-8"):

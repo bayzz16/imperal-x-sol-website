@@ -262,9 +262,7 @@ summary:focus-visible {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 50% 28%, rgba(164, 96, 255, 0.26), transparent 26%),
-    linear-gradient(180deg, rgba(9, 6, 16, 0.4), rgba(8, 7, 18, 0.7));
+  background: linear-gradient(180deg, rgba(9, 6, 16, 0.22), rgba(8, 7, 18, 0.68)), url("./assets/hero/imperial-sol-fantasy-scene.svg") center 42% / cover no-repeat, linear-gradient(180deg, #130d2b, #100b21);
 }
 
 .hero-glow {
@@ -386,18 +384,8 @@ summary:focus-visible {
   gap: 18px;
 }
 
-.hero-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px 18px;
-  font-family: "Cinzel", serif;
-  text-transform: uppercase;
-  line-height: 0.9;
-  letter-spacing: 0.06em;
-  text-shadow: 0 0 20px rgba(255, 211, 118, 0.45);
-}
+.hero-logo { display:flex; align-items:center; justify-content:center; width:min(100%,780px); margin:0 auto; filter:drop-shadow(0 12px 28px rgba(0,0,0,.45)); }
+.hero-logo img { display:block; width:100%; height:auto; max-height:210px; object-fit:contain; }
 
 .hero-logo-imperial,
 .hero-logo-sol {
@@ -573,22 +561,20 @@ summary:focus-visible {
   right: 14px;
 }
 
-.rank-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0 14px;
-  border: 1px solid currentColor;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-  font-family: "Cinzel", serif;
-  font-size: clamp(0.8rem, 0.9vw, 1rem);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: currentColor;
-}
+.rank-header { display:flex; align-items:center; justify-content:center; min-height:76px; padding:0; background:transparent; }
+.rank-badge { display:block; width:100%; max-width:390px; aspect-ratio:600 / 90; background-image:url("./assets/ranks/rank-badges.svg"); background-repeat:no-repeat; background-size:100% 1200%; }
+.rank-badge--member { background-position: center 0%; }
+.rank-badge--adventurer { background-position: center 9.090909090909092%; }
+.rank-badge--knight { background-position: center 18.181818181818183%; }
+.rank-badge--elite { background-position: center 27.27272727272727%; }
+.rank-badge--champion { background-position: center 36.36363636363637%; }
+.rank-badge--legend { background-position: center 45.45454545454545%; }
+.rank-badge--mythic { background-position: center 54.54545454545454%; }
+.rank-badge--helper { background-position: center 63.63636363636363%; }
+.rank-badge--moderator { background-position: center 72.72727272727273%; }
+.rank-badge--admin { background-position: center 81.81818181818183%; }
+.rank-badge--manager { background-position: center 90.9090909090909%; }
+.rank-badge--owner { background-position: center 100%; }
 
 .rank-card p {
   margin: 0;

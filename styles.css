@@ -1079,3 +1079,110 @@ summary:focus-visible {
   .lobby-gallery-grid { grid-template-columns: 1fr; gap: 12px; }
   .lobby-shot, .lobby-shot--wide { grid-column: auto; aspect-ratio: 16 / 10; }
 }
+
+
+/* Reference-alignment pass: deeper cosmic background, compact hero, original rank sheet. */
+:root { --header-height: 66px; }
+body {
+  background:
+    radial-gradient(ellipse at 50% 14%, rgba(119, 42, 213, .26), transparent 42%),
+    radial-gradient(ellipse at 8% 58%, rgba(105, 28, 202, .16), transparent 34%),
+    radial-gradient(ellipse at 92% 76%, rgba(140, 43, 221, .18), transparent 35%),
+    #080511;
+}
+.page-shell::before {
+  content:"";
+  position:absolute; inset:0; pointer-events:none; z-index:-1;
+  background-image:
+    radial-gradient(circle at 7% 13%,rgba(255,255,255,.8) 0 1px,transparent 1.7px),
+    radial-gradient(circle at 19% 27%,rgba(223,174,255,.7) 0 1px,transparent 1.8px),
+    radial-gradient(circle at 76% 17%,rgba(255,220,153,.7) 0 1px,transparent 1.8px),
+    radial-gradient(circle at 91% 41%,rgba(222,174,255,.65) 0 1px,transparent 1.8px);
+  background-size: 190px 210px, 260px 280px, 320px 250px, 230px 300px;
+  opacity:.62;
+}
+.site-header { background:rgba(10,5,20,.91); border-bottom-color:rgba(176,91,255,.4); }
+.header-inner { width:min(100% - 22px, 1420px); gap:clamp(8px,1.5vw,22px); }
+.main-nav { border-radius:999px; padding:5px 8px; gap:2px; background:rgba(27,13,43,.9); box-shadow:0 0 24px rgba(133,42,255,.16); }
+.main-nav a { min-height:36px; padding:0 clamp(7px,1vw,14px); font-size:clamp(.72rem,.85vw,.9rem); }
+.discord-button { min-height:40px; border-radius:999px; border-color:rgba(193,105,255,.8); background:linear-gradient(120deg,rgba(112,37,205,.36),rgba(48,14,76,.75)); box-shadow:0 0 20px rgba(150,57,255,.22); font-size:.82rem; }
+.hero { min-height:clamp(580px, 68vw, 790px); padding:clamp(34px,5vw,70px) 20px 68px; }
+.hero-scene {
+  background:
+    linear-gradient(180deg,rgba(8,4,18,.1) 0%,rgba(8,4,18,.12) 45%,rgba(8,4,18,.72) 100%),
+    url("./assets/hero/imperial-sol-fantasy-scene.svg") center 42% / cover no-repeat,
+    radial-gradient(ellipse at 50% 42%,#53217f 0%,#21103e 48%,#090614 100%);
+}
+.hero-content { gap:clamp(12px,1.6vw,20px); }
+.hero-logo--original { width:min(100%, 850px); gap:clamp(10px,2.6vw,38px); }
+.hero-logo--original img { max-height:clamp(92px,13vw,174px); max-width:43%; }
+.hero-logo-cross { font-size:clamp(1.8rem,4vw,3.5rem); }
+.hero h1 { font-size:clamp(1.55rem,3.1vw,3.4rem); text-shadow:0 4px 22px rgba(0,0,0,.8); }
+.hero-copy { max-width:720px; font-size:clamp(.88rem,1.2vw,1.05rem); text-shadow:0 2px 12px #090411; }
+.hero-actions { gap:14px; }
+.button { min-height:46px; border-radius:11px; font-size:.88rem; }
+.button-primary { border-color:#c89aff; box-shadow:0 0 24px rgba(169,71,255,.48),inset 0 0 12px rgba(255,255,255,.08); }
+.button-secondary { border-color:rgba(255,211,117,.8); box-shadow:0 0 20px rgba(255,198,74,.2); }
+.hero-castle { opacity:.48; filter:drop-shadow(0 0 22px rgba(139,52,255,.35)); }
+.portal { opacity:.74; }
+.lobby-gallery { padding:28px 0 42px; }
+.section-title { gap:14px; margin-bottom:10px; }
+.section-title h2 { font-size:clamp(1.45rem,2.5vw,2.5rem); }
+.section-subtitle { font-size:.86rem; margin-bottom:20px; }
+.lobby-gallery-grid { gap:12px; }
+.lobby-shot { border-radius:12px; box-shadow:0 10px 25px rgba(0,0,0,.38),0 0 12px rgba(138,60,255,.12); }
+.rank-section { padding-top:18px; }
+.rank-grid { grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
+.rank-card { min-height:150px; padding:12px 12px 10px; border-radius:13px; background:linear-gradient(145deg,rgba(42,17,68,.9),rgba(9,6,19,.94) 68%); box-shadow:inset 0 0 22px rgba(146,75,255,.12),0 8px 20px rgba(0,0,0,.25); }
+.rank-header { min-height:54px; }
+.rank-badge {
+  background-image:url("./assets/png-kamu/rank/file_00000000b6148206bcd1526edd49b5ee.png");
+  background-size:100% 1200%;
+  filter:drop-shadow(0 0 5px currentColor);
+}
+.rank-card p { min-height:34px; font-size:.76rem; }
+.rank-card a { min-height:34px; font-size:.78rem; border-color:rgba(218,177,255,.24); background:rgba(13,8,24,.5); }
+.section-divider { opacity:.8; }
+.status-card,.skill-list>div { background:linear-gradient(135deg,rgba(34,16,53,.76),rgba(10,7,18,.86)); }
+.faq-list details { border:1px solid rgba(184,122,255,.2); border-radius:12px; padding:8px 14px 12px; background:rgba(20,10,33,.56); }
+@media (max-width:1060px) {
+  .rank-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .header-inner { grid-template-columns:auto 1fr auto; }
+}
+@media (max-width:760px) {
+  .header-inner { grid-template-columns:1fr auto; min-height:64px; padding:8px 0; }
+  .brand { gap:6px; min-height:42px; }
+  .brand-mark { width:34px; height:34px; }
+  .brand-divider { font-size:1.5rem; }
+  .brand-sol-title { font-size:.95rem; }
+  .main-nav { top:calc(100% + 4px); background:rgba(13,6,24,.98); }
+  .hero { min-height:570px; padding:32px 16px 42px; }
+  .hero-logo--original img { max-height:100px; }
+  .hero h1 { font-size:clamp(1.25rem,5.2vw,2rem); line-height:1.18; }
+  .hero-copy { font-size:.88rem; line-height:1.55; }
+  .hero-castle { width:100vw; height:360px; bottom:10px; }
+  .portal { width:24vw; height:35vw; bottom:24px; }
+  .portal-left { left:4%; } .portal-right { right:4%; }
+  .lobby-gallery { padding:24px 0 32px; }
+  .lobby-gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .lobby-shot--wide { grid-column:1/-1; aspect-ratio:16/8; }
+  .rank-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+  .rank-card { min-height:138px; padding:10px 8px; }
+  .rank-header { min-height:45px; }
+  .rank-card p { font-size:.7rem; min-height:32px; }
+  .rank-card a { font-size:.72rem; padding:0 7px; }
+  .section-title h2 { font-size:clamp(1.25rem,5vw,1.8rem); }
+  .ornament { width:14px; height:14px; }
+}
+@media (max-width:420px) {
+  .brand-mark { display:none; }
+  .brand-main { font-size:.7rem; }
+  .brand-sol-title { font-size:.82rem; }
+  .menu-toggle { padding:0 12px; }
+  .hero { min-height:530px; }
+  .hero-logo--original { gap:6px; }
+  .hero-logo--original img { max-height:82px; }
+  .lobby-gallery-grid { grid-template-columns:1fr; }
+  .lobby-shot--wide { grid-column:auto; aspect-ratio:16/10; }
+  .rank-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}

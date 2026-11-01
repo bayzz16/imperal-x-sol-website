@@ -1224,3 +1224,46 @@ body {
 @media (prefers-reduced-motion:reduce) {
   .lobby-shot img { transition:none; }
 }
+
+/* Screenshot review fixes: one brand mark, background artwork, individual rank cells. */
+.brand--single { display:flex; align-items:center; min-width:0; }
+.brand--single img { display:block; width:clamp(108px,13vw,174px); height:clamp(34px,4.2vw,52px); object-fit:contain; }
+.hero-logo--single { display:flex; align-items:center; justify-content:center; width:min(100%,680px); margin:0 auto; }
+.hero-logo--single img { display:block; width:clamp(190px,37vw,430px); max-width:100%; max-height:clamp(90px,15vw,165px); object-fit:contain; filter:drop-shadow(0 8px 24px rgba(0,0,0,.65)) drop-shadow(0 0 18px rgba(186,91,255,.32)); }
+.hero-scene { background:linear-gradient(180deg,rgba(12,4,27,.26) 0%,rgba(18,6,37,.24) 42%,rgba(8,4,17,.9) 100%),url("./assets/png-kamu/logo/file_00000000f0147209ba276b383f1abbd3.png") center 35% / cover no-repeat,radial-gradient(ellipse at 50% 38%,#53217f 0%,#21103e 48%,#090614 100%); }
+.hero-glow { opacity:.55; } .hero-castle { opacity:.19; } .floating-island { opacity:.24; }
+.hero { isolation:isolate; } .hero-scene { z-index:-1; } .hero-content { position:relative; z-index:2; }
+.hero-logo--single { margin-bottom:clamp(6px,1vw,14px); } .hero h1 { margin-top:0; }
+.rank-badge { display:block; width:100%; height:48px; background-image:url("./assets/png-kamu/rank/file_00000000b6148206bcd1526edd49b5ee.png"); background-size:200% 600%; background-repeat:no-repeat; filter:drop-shadow(0 0 4px currentColor); }
+.rank-badge--member { background-position:0% 0%; }
+.rank-badge--adventurer { background-position:100% 0%; }
+.rank-badge--knight { background-position:0% 20%; }
+.rank-badge--elite { background-position:100% 20%; }
+.rank-badge--champion { background-position:0% 40%; }
+.rank-badge--legend { background-position:100% 40%; }
+.rank-badge--mythic { background-position:0% 60%; }
+.rank-badge--helper { background-position:100% 60%; }
+.rank-badge--moderator { background-position:0% 80%; }
+.rank-badge--admin { background-position:100% 80%; }
+.rank-badge--manager { background-position:0% 100%; }
+.rank-badge--owner { background-position:100% 100%; }
+.rank-header { min-height:52px; display:flex; align-items:center; justify-content:center; overflow:hidden; }
+.rank-card { min-height:150px; }
+.lobby-gallery-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.lobby-shot--wide { grid-column:auto; aspect-ratio:16/10; }
+@media (max-width:760px) {
+ .brand--single img { width:clamp(108px,29vw,150px); height:36px; }
+ .hero { min-height:500px; padding:30px 16px 36px; }
+ .hero-logo--single img { width:clamp(190px,58vw,300px); max-height:110px; }
+ .hero-castle { opacity:.12; }
+ .rank-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; }
+ .rank-card { min-height:132px; } .rank-badge { height:40px; }
+ .lobby-gallery-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ .lobby-shot--wide { grid-column:1/-1; }
+}
+@media (max-width:420px) {
+ .hero { min-height:470px; }
+ .hero-logo--single img { width:min(78vw,260px); max-height:94px; }
+ .rank-badge { height:34px; } .rank-header { min-height:42px; }
+ .lobby-gallery-grid { grid-template-columns:1fr; } .lobby-shot--wide { grid-column:auto; }
+}

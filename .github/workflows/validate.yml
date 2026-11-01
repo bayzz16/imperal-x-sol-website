@@ -1,0 +1,57 @@
+name: Validate website
+
+on:
+  pull_request:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Check JavaScript syntax
+        run: node --check script.js
+      - name: Validate internal links and mobile navigation
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+
+          class SiteParser(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.ids = set()
+                  self.anchors = []
+                  self.buttons = []
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  if attrs.get("id"):
+                      self.ids.add(attrs["id"])
+                  if tag == "a" and attrs.get("href", "").startswith("#"):
+                      self.anchors.append(attrs["href"][1:])
+                  if tag == "button":
+                      self.buttons.append(attrs)
+
+          parser = SiteParser()
+          parser.feed(Path("index.html").read_text(encoding="utf-8"))
+          missing = sorted({target for target in parser.anchors if target and target not in parser.ids})
+          if missing:
+              raise SystemExit(f"Broken internal anchor targets: {missing}")
+
+          toggles = [button for button in parser.buttons if "menu-toggle" in button.get("class", "").split()]
+          if len(toggles) != 1:
+              raise SystemExit(f"Expected exactly one .menu-toggle button, found {len(toggles)}")
+          if toggles[0].get("aria-controls") != "primary-navigation":
+              raise SystemExit("Mobile navigation toggle must control #primary-navigation")
+          if toggles[0].get("aria-expanded") != "false":
+              raise SystemExit("Mobile navigation must start collapsed")
+          if not Path("script.js").exists() or "menu-toggle" not in Path("script.js").read_text(encoding="utf-8"):
+              raise SystemExit("Mobile navigation JavaScript handler is missing")
+
+          print(f"Validated {len(parser.anchors)} internal links; mobile navigation markup and handler are present.")
+          PY

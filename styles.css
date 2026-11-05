@@ -1423,7 +1423,7 @@ body {
   width:100%;
   max-width:360px;
   height:auto;
-  aspect-ratio:2.05 / 1;
+  aspect-ratio:4 / 1;
   background-image:url("./assets/png-kamu/rank/file_00000000b6148206bcd1526edd49b5ee.png");
   background-size:200% 700%;
   image-rendering:pixelated;
@@ -1476,7 +1476,7 @@ body {
   .rank-grid { grid-template-columns:repeat(2,minmax(0,1fr));gap:12px; }
   .rank-card { min-height:140px;padding:8px;box-shadow:3px 3px 0 #111; }
   .rank-header { min-height:52px; }
-  .rank-badge { aspect-ratio:2.05 / 1; }
+  .rank-badge { aspect-ratio:4 / 1; }
 }
 @media (prefers-reduced-motion:reduce) {
   .rank-card,.rank-card:hover,.lobby-shot,.lobby-shot:nth-child(2),.lobby-shot:nth-child(3) { transform:none;transition:none; }
